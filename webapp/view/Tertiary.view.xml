@@ -1,0 +1,49 @@
+<mvc:View
+	controllerName="josecarlosgz.navigation.controller.Tertiary"
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true"
+	xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+	<Page
+		titleAlignment="Auto"
+	>
+		<customHeader>
+			<Bar>
+				<contentLeft>
+					<Button
+						icon="sap-icon://nav-back"
+						press="onNavBack"
+					/>
+				</contentLeft>
+				<contentMiddle>
+                        <Title
+                            level="H6"
+                            text="{i18n>titleTertiaryView}"
+                            textAlign="Center"
+                            width="100%"
+                        />
+				</contentMiddle>
+				<contentRight/>
+			</Bar>
+		</customHeader>
+
+		<content>
+             <!-- OJO.El componente VBox tiene por defecto el flex-direction: column. Por lo tanto el justifyContent nos alineará en el cross axis (vertical) -->
+			<VBox height="100%" justifyContent="Center">
+                <HBox   justifyContent="Center" >
+                    <core:Icon
+                        size="100px"
+                        src="sap-icon://screen-split-three"
+                    />
+                </HBox>
+                <HBox        justifyContent="Center"  >
+                <Text
+                    width="100%" text="Tertiary.view.xml" class="size16px"
+                />
+                </HBox>
+			</VBox>
+		</content>
+
+	</Page>
+</mvc:View>

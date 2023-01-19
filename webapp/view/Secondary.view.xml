@@ -1,0 +1,18 @@
+<mvc:View controllerName="josecarlosgz.navigation.controller.Secondary"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+	<MessagePage
+		title="{i18n>titleSecondaryView}"
+		showHeader="true"
+		showNavButton="true"
+        navButtonPress="onNavBack"
+		text="Secondary.view.xml"
+		enableFormattedText="true"
+		description=""
+		icon="sap-icon://screen-split-two"
+	>
+		<buttons>
+			<Button text="navigate to Tertiary View" press="navToTertiaryView" />
+		</buttons>
+	</MessagePage>
+</mvc:View>

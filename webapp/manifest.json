@@ -1,0 +1,139 @@
+{
+  "_version": "1.48.0",
+  "sap.app": {
+    "id": "josecarlosgz.navigation",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.8.3",
+      "toolsId": "fbfe4c4f-ed02-41c3-b42d-728da5249e57"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": false,
+    "dependencies": {
+      "minUI5Version": "1.109.3",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "josecarlosgz.navigation.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {}
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "josecarlosgz.navigation.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "aliasName_Main",
+          "pattern": "",
+          "target": [
+            "aliasTarget_Main"
+          ]
+        },
+        {
+          "name": "aliasName_Secondary",
+          "pattern": "secondary_view/{parametro01}/{parametro02}",
+          "target": [
+            "aliasTarget_Secondary"
+          ]
+        },
+        {
+          "name": "aliasName_Tertiary",
+          "pattern": "tertiary_view",
+          "target": [
+            "aliasTarget_Tertiary"
+          ]
+        }
+      ],
+      "targets": {
+        "aliasTarget_Main": {
+          "viewType": "XML",
+          "viewName": "Main",
+          "OJO!!": "El viewName de de los 'targets' no va precedido de de la ruta con el namespace... sin embargo el viewName del rootView si que va precedido de la ruta."
+        },
+        "aliasTarget_Secondary": {
+          "viewType": "XML",
+          "viewName": "Secondary"
+        },
+        "aliasTarget_Tertiary": {
+          "viewType": "XML",
+          "viewName": "Tertiary"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "josecarlosgz.navigation.view.App",
+      "type": "XML"
+    }
+  }
+}

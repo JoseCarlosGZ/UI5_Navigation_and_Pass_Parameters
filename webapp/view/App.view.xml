@@ -1,0 +1,12 @@
+<mvc:View
+	controllerName="josecarlosgz.navigation.controller.App"
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true"
+	xmlns="sap.m"
+>
+	<App id="app">
+		<Page title="{i18n>title}">
+			<content/>
+		</Page>
+	</App>
+</mvc:View>
